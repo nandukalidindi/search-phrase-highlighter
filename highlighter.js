@@ -13,15 +13,9 @@ if(decodeURI(window.location.href).indexOf("highlighter=") !== -1) {
 
   var searchTerms = (decodeURI(window.location.href).split("highlighter=")[1]).split(",");
 
-  // var k = document.body.innerHTML;
-
   if(searchTerms[0] !== "") {
     searchTerms.forEach(function(searchTerm) {
-      // debugger;
       $('body').mark(searchTerm);
-      // var regEx = new RegExp(searchTerm, "ig");
-      // k = k.replace(regEx, function(str) { return "<em>" + str + "</em>" });
     });
   }
-  // document.body.innerHTML = k;
 }
